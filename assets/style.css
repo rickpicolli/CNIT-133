@@ -1,7 +1,6 @@
 header {
 	font-size: 17px;
 	color: green;
-	/*background-color: #ffffff;*/
 	text-align: center;
 
 }
@@ -14,9 +13,32 @@ body {
 
 p {
 	margin-left: 30px;
+	font-size: 21px;
 }
 
-li {
-	margin-left: 50px;
-	margin-top: 20px;
+a {
+ 	text-decoration:none;
+ 	color:#cc0000;
+}
+
+a.button,div.container{
+ 	float:left;
+ 	/*display: flex;*/
+ 	flex-wrap: wrap;
+
+}
+
+a.button{
+	 background-color:#cc0000;
+	 border:1px solid black;
+	 border-radius:10px;
+	 color:#fff;
+	 margin-right:100px;
+	 margin-top: 20px;
+	 padding:10px 10px 10px 10px;
+}
+
+ul, li {
+	list-style: none;
+	margin: 10px;
 }
