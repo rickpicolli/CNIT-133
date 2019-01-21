@@ -1,0 +1,22 @@
+header {
+	font-size: 17px;
+	color: green;
+	/*background-color: #ffffff;*/
+	text-align: center;
+
+}
+
+body {
+
+	background-color: beige;
+
+}
+
+p {
+	margin-left: 30px;
+}
+
+li {
+	margin-left: 50px;
+	margin-top: 20px;
+}
