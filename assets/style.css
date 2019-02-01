@@ -7,7 +7,7 @@ header {
 
 body {
 
-	background-color: beige;
+	background-color: paleturquoise;
 
 }
 
@@ -41,4 +41,38 @@ a.button{
 ul, li {
 	list-style: none;
 	margin: 10px;
+}
+
+.box {
+	width: 650px;
+	border: 2px dashed blue;
+	padding: 35px;
+	margin: 25px;
+	background-color: white;
+}
+
+.box p {
+	margin-bottom: -17px;
+}
+
+p.first {
+	font-family: "Times New Roman";
+	color: red;
+	font-weight: bold;
+
+}
+
+p.second {
+	font-family: "Arial";
+	color: blue;
+	font-weight: bold;
+
+}
+
+p.third {
+	font-family: "Impact";
+	color: green;
+	font-weight: bold;
+	font-style: italic;
+
 }
