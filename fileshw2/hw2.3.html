@@ -7,154 +7,69 @@
   <title>Homework 2</title>
   <link rel="stylesheet" type="text/css" href="../assets/style.css">
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-  <script type="text/javascript">
-    
-    function numbers() {
-
-      // defining variables
-      var number1;
-      var number2;
-      var number3;
-      var number4;
-      var number5;
-      var positive;
-      var negative;
-      var zeros;
-
-   
-
-
-      // getting the integers from the boxes
-      firstNumber = document.getElementById("number1").value;
-      secondNumber = document.getElementById("number2").value;
-      thirdNumber = document.getElementById("number3").value;
-      forthNumber = document.getElementById("number4").value;
-      fifthNumber = document.getElementById("number5").value;
-
-      // convert the inputs from strings to integers
-      firstNumber = parseInt(firstNumber);
-      secondNumber = parseInt(secondNumber);
-      thirdNumber = parseInt(thirdNumber);
-      forthNumber = parseInt(forthNumber);
-      fifthNumber = parseInt(fifthNumber);
-
-      // number1 = parseInt(document.form.number1.value);
-      // number2 = parseInt(document.form.number2.value);
-      // number3 = parseInt(document.form.number3.value);
-      // number4 = parseInt(document.form.number4.value);
-      // number5 = parseInt(document.form.number5.value);
-      positive = 0;
-      negative = 0;
-      zeros = 0;
-
-      if (firstNumber > 0) {
-        positive++;
-      }
-      else if (firstNumber == 0) {
-        zeros++;
-      }
-      else if (firstNumber < 0) {
-        negative++
-      }
-      if (secondNumber > 0) {
-        positive++;
-      }
-      else if (secondNumber == 0) {
-        zeros++;
-      }
-      else if (secondNumber < 0) {
-        negative++
-      }
-      if (thirdNumber > 0) {
-        positive++;
-      }
-      else if (thirdNumber == 0) {
-        zeros++;
-      }
-      else if (thirdNumber < 0) {
-        negative++
-      }
-      if (forthNumber > 0) {
-        positive++;
-      }
-      else if (forthNumber == 0) {
-        zeros++;
-      }
-      else if (forthNumber < 0) {
-        negative++
-      }
-      if (fifthNumber > 0) {
-        positive++;
-      }
-      else if (fifthNumber == 0) {
-        zeros++;
-      }
-      else if (fifthNumber < 0) {
-        negative++
-      }
-
-      console.log(positive);
-      console.log(negative);
-      console.log(zeros);
-
-      window.alert("The number of positive numbers is: " + positive + "\n" + "The number of negative numbers is: " + negative + "\n" + "The number of zeros is: " + zeros + "\n");
-    }
-
-    $(document).ready(function() {
-      $("#fade").click(function() {
-        $("#box").fadeTo("slow", 0.15);
-      });
-    });
-
-  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="../assets/javascript.js"></script>
 </head>
 <body>
 
   <div class="box">
     
-
-    <h2>Part 3 - Jquery</h2>
+    <header>
+      <h2>Part 3 - Jquery</h2>
+    </header>
+    
     <p> Create a webpage that contains a script that inputs 5 numbers and determines and displays the count of the negative numbers, the number of positive numbers, and the number of zeros. For input, use form text boxes. Your results should be displayed using a form textarea or a div element. Define a 'Click to Fade Results' button on the form. Use jQuery to define a ready handler that defines a click event handler for the button, such that clicking the button fades the results in the textarea. </p>
+    <br><br>
 
 
     <form id="myform">
-      <p> Type in the first number: </p>
-      <p>
-        <input type="number" id="number1">
-      </p>
-      <p> Type in the second number: </p>
-      <p>
-        <input type="number" id="number2">
-      </p>
-      <p> Type in the third number: </p>
-      <p>
-        <input type="number" id="number3">
-      </p>
-      <p> Type in the forth number: </p>
-      <p>
-        <input type="number" id="number4">
-      </p>
-      <p> Type in the fith number: </p>
-      <p>
-        <input type="number" id="number5">
-      </p>
-      <p>
-      <input type="button" value="Calculate" onclick="numbers()">
-      </p>
-      <br>
-      <br>
-      <textarea type="text" id="result1" rows="10" cols="50"></textarea>
-      <br>
+      <div>
+        <p> Type in the number 1: </p>
+        <p>
+          <input type="number" id="number1">
+        </p>
+        <p> Type in the number 2: </p>
+        <p>
+          <input type="number" id="number2">
+        </p>
+        <p> Type in the number 3: </p>
+        <p>
+          <input type="number" id="number3">
+        </p>
+        <p> Type in the number 4: </p>
+        <p>
+          <input type="number" id="number4">
+        </p>
+        <p> Type in the number 5: </p>
+        <p>
+          <input type="number" id="number5">
+        </p>
+        <p>
+        <input type="button" value="Calculate" onclick="numbers()">
+        </p>
+        <br>
+        <br>
+      </div>
+      <div>
+        <br>
+      </div>
+      
+      <div>
+        <br>
+        <p>results:</p>
+        <br><br>
+        <textarea type="text" id="result" rows="10" cols="50"></textarea>
+        <br>
+        <input type="button" id="fade" value="Click to fade">
+      </div>
     </form>
-    <button>Click to fade</button>
-    </div>
-  <ul>
-    <li>
-      <a href="../hw2.html" class="button">Back to main page</a>
-    </li>
-  </ul>   
+
+  </div>
+<ul>
+  <li>
+    <a href="../hw2.html" class="button">Back to main page</a>
+  </li>
+</ul>   
 
 </body>
 </html>
