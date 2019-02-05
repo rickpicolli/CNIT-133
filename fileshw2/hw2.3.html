@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Future homework of the CNIT-133 class">
+  <meta name="keywords" content="HTML and CSS">
+  <title>Homework 2</title>
+  <link rel="stylesheet" type="text/css" href="../assets/style.css">
+<!-- <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style> -->
+  <script type="text/javascript">
+    
+    function numbers() {
+
+      var number1;
+      var number2;
+      var number3;
+      var number4;
+      var number5;
+      var positive;
+      var negative;
+      var zeros;
+
+   
+
+
+      // getting the integers from the boxes
+      firstNumber = document.getElementById("number1").value;
+      secondNumber = document.getElementById("number2").value;
+      thirdNumber = document.getElementById("number3").value;
+      forthNumber = document.getElementById("number4").value;
+      fifthNumber = document.getElementById("number5").value;
+
+      // convert the inputs from strings to integers
+      firstNumber = parseInt(firstNumber);
+      secondNumber = parseInt(secondNumber);
+      thirdNumber = parseInt(thirdNumber);
+      forthNumber = parseInt(forthNumber);
+      fifthNumber = parseInt(fifthNumber);
+
+      // number1 = parseInt(document.form.number1.value);
+      // number2 = parseInt(document.form.number2.value);
+      // number3 = parseInt(document.form.number3.value);
+      // number4 = parseInt(document.form.number4.value);
+      // number5 = parseInt(document.form.number5.value);
+      positive = 0;
+      negative = 0;
+      zeros = 0;
+
+      if (firstNumber > 0) {
+        positive++;
+      }
+      else if (firstNumber == 0) {
+        zeros++;
+      }
+      else if (firstNumber < 0) {
+        negative++
+      }
+      if (secondNumbe > 0) {
+        positive++;
+      }
+      else if (secondNumbe == 0) {
+        zeros++;
+      }
+      else if (secondNumbe < 0) {
+        negative++
+      }
+      if (thirdNumber > 0) {
+        positive++;
+      }
+      else if (thirdNumber == 0) {
+        zeros++;
+      }
+      else if (thirdNumber < 0) {
+        negative++
+      }
+      if (forthNumber > 0) {
+        positive++;
+      }
+      else if (forthNumber == 0) {
+        zeros++;
+      }
+      else if (forthNumber < 0) {
+        negative++
+      }
+      if (fifthNumber > 0) {
+        positive++;
+      }
+      else if (fifthNumber == 0) {
+        zeros++;
+      }
+      else if (fifthNumber < 0) {
+        negative++
+      }
+
+      // window.alert("The number of positive numbers is: " + positive + "\n" + "The number of negative numbers is: " + negative + "\n" + "The number of zeros is: " + zeros + "\n");
+
+      document.form.box.value = "The number of positive numbers is: " + positive + "\n" + "The number of negative numbers is: " + negative + "\n" + "The number of zeros is: " + zeros + "\n"
+    }
+
+    $(document).ready(function() {
+      $("#fade").click(function() {
+        $("#box").fadeTo("slow", 0.15);
+      });
+    });
+
+  </script>
+</head>
+<body>
+
+  <div class="box">
+    
+
+    <h2>Part 3 - Jquery</h2>
+    <p> Create a webpage that contains a script that inputs 5 numbers and determines and displays the count of the negative numbers, the number of positive numbers, and the number of zeros. For input, use form text boxes. Your results should be displayed using a form textarea or a div element. Define a 'Click to Fade Results' button on the form. Use jQuery to define a ready handler that defines a click event handler for the button, such that clicking the button fades the results in the textarea. </p>
+
+
+    <form id="myform">
+      <p> Type in the first number: </p>
+      <p>
+        <input type="text" id="number1">
+      </p>
+      <p> Type in the second number: </p>
+      <p>
+        <input type="text" id="number2">
+      </p>
+      <p> Type in the third number: </p>
+      <p>
+        <input type="text" id="number3">
+      </p>
+      <p> Type in the forth number: </p>
+      <p>
+        <input type="text" id="number4">
+      </p>
+      <p> Type in the fith number: </p>
+      <p>
+        <input type="text" id="number5">
+      </p>
+      <p>
+      <button id="myBtn" onclick="numbers()">Calculate</button>
+      </p>
+      <br>
+      <br>
+      <textarea type="text" id="box" rows="10" cols="50"></textarea>
+      <br>
+    </form>
+    <button id="fade">Click to fade</button>
+    </div>
+  <ul>
+    <li>
+      <a href="../hw2.html" class="button">Back to main page</a>
+    </li>
+  </ul>   
+
+</body>
+</html>
