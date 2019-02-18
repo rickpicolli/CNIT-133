@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Third homework of the CNIT-133 class">
+  	<meta name="keywords" content="HTML and CSS">
+	<title>Homework 3</title>
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../assets/hm3.js"></script>
+	<link rel="stylesheet" type="text/css" href="../assets/style.css">
+</head>
+<body>
+	<header>
+		<h1>Homework 3 - Part 1</h1>
+		<h3>Student Grades</h3>
+	</header>
+
+	<div id="showhide">Click to Show/Hide Instructions</div>
+	<div id="instructions">The following webpage contains the heading, Student Grades, and uses a script that inputs a student's homework average, mid-term exam score, final exam score, and ACR (all as integers)'. Calculate the student's final average according to the formula: final average = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.1 * ACR)</div>
+	
+	<p> Input your homework average:</p>
+	<p>		
+		<input type="number" id="number1">
+	</p>
+	<p> Input your mid-term exam score:</p>
+	<p>		
+		<input type="number" id="number2">
+	</p>
+	<p> Input your final exam score:</p>
+	<p>		
+		<input type="number" id="number3">
+	</p>
+	<p> Input your ACR:</p>
+	<p>		
+		<input type="number" id="number4">
+	</p>
+
+	<button type="button" onclick="grades()">Submit</button>
+
+	<p id="msg"></p>
+	
+	<p> Your Final Grade is: </p>
+	<p>
+		<input type="number" id="favg" readonly="readonly">
+	</p>
+	<p> Your Final Letter is: </p>
+	<p id="grade"></p>
+	<p id="result"></p>
+	
+	
+
+
+	<ul>
+		<li>
+			<a href="../hw3.html" class="button">Back to main page</a>
+		</li>
+	</ul>		
+
+</body>
+</html>

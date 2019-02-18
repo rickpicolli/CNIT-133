@@ -111,3 +111,19 @@ th {
   background-color: #4CAF50;
   color: white;
 }
+
+#instructions, #showhide {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#showhide {
+	width: 250px;
+}
+
+#instructions {
+  padding: 50px;
+  display: none;
+}

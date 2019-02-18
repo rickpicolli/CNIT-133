@@ -7,114 +7,20 @@
 	<title>Homework 3</title>
 	<link rel="stylesheet" type="text/css" href="assets/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script>
-		
-		function grades() {
-			var n1, n2, n3, n4, favg, letter;
 
-			n1 = document.getElementById('number1').value;
-			n2 = document.getElementById('number2').value;
-			n3 = document.getElementById('number3').value;
-			n4 = document.getElementById('number4').value;
-
-			if (isNaN(n1) || isNaN(n2) || isNaN(n3) || isNaN(n4) || n1 < 0 || n2 < 0 || n3 < 0 || n4 < 0 || n1 > 100 || n2 > 100 || n3 > 100 || n4 > 100) {
-				text = "The inputs should be between 0 and 100";
-			} else {
-				favg = (.5 * n1) + (.2 * n2) + (.2 * n3) + (.1 * n4);
-
-				if (favg >= 0 && favg < 60) {
-					letter = "F";
-					result = "Student must retake the course"
-				} else if (favg >= 60 && favg < 70) {
-					letter = "D";
-					result = "Student must retake the course"
-				} else if (favg >= 70 && favg < 80) {
-					letter = "C";
-					result = "Congratulations!"
-				} else if (favg >= 80 && favg < 90) {
-					letter = "B";
-					result = "Congratulations!"
-				} else {
-					letter = "A";
-					result = "Congratulations!"
-				}
-
-				document.getElementById("favg").value = favg;
-				document.getElementById("grade").innerHTML = letter;
-
-			}
-
-			document.getElementById("msg").innerHTML = text;
-			
-}
-</script>
-<script>
-// JQUERY //
-
-// $(document).ready(function() {
-// 	$("showhide").click(function() {
-// 		$("#instructions").slideToggle("slow");
-// 	});
-// });
-
-$(document).ready(function(){
-  $("#showhide").click(function(){
-    $("#instructions").slideToggle("slow");
-  });
-});
-
-	</script>
-	<style>
-		#instructions, #showhide {
-		  padding: 5px;
-		  text-align: center;
-		  background-color: #e5eecc;
-		  border: solid 1px #c3c3c3;
-		}
-
-		#instructions {
-		  padding: 50px;
-		  display: none;
-		}
-	</style>
 </head>
 <body>
 	<header>
-		<h1>Part 1</h1>
+		<h1>Homework 3 - Part 1</h1>
 		<h3>Student Grades</h3>
 	</header>
-	
-	<p> Input your homework average:</p>
-	<p>		
-		<input type="number" id="number1">
-	</p>
-	<p> Input your mid-term exam score:</p>
-	<p>		
-		<input type="number" id="number2">
-	</p>
-	<p> Input your final exam score:</p>
-	<p>		
-		<input type="number" id="number3">
-	</p>
-	<p> Input your ACR:</p>
-	<p>		
-		<input type="number" id="number4">
-	</p>
 
-	<button type="button" onclick="grades()">Submit</button>
-
-	<p id="msg"></p>
+	<p><a href="fileshw3/hw3.1.html"> Part 1 - Students Grade</a></p>
+	<p><a href="fileshw2/hw2.2.html"> Part 2 - </a></p>
+	<p><a href="fileshw2/hw2.3.html"> Part 3 - </a></p>
+	<p><a href="fileshw2/hw2.4.html"> Part 4 -  </a></p>
+	<p><a href="fileshw2/extra.html"> . </a></p>
 	
-	<p> Your Final Grade is: </p>
-	<p>
-		<input type="number" id="favg" readonly="readonly">
-	</p>
-	<p> Your Final Letter is: </p>
-	<p id="grade"></p>
-	<p id="result"></p>
-	
-	<div id="showhide">Click to Show/Hide Instructions</div>
-	<div id="instructions">The following webpage contains the heading, Student Grades, and uses a script that inputs a student's homework average, mid-term exam score, final exam score, and ACR (all as integers)'. Calculate the student's final average according to the formula: final average = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.1 * ACR)</div>
 
 
 	<ul>
