@@ -18,7 +18,10 @@
 		function sales() {
 			var total1, total2, total3, total4, me1, me2, me3, me4, name, item1, item2, item3, item4;
 
-			total1 = item1 * 239.99;
+			item1 = parseInt(document.getElementById("item1").value);
+			item2 = parseInt(document.getElementById("item2").value);
+			item3 = parseInt(document.getElementById("item3").value);
+			item4 = parseInt(document.getElementById("item4").value);
 
 		}
 
@@ -84,6 +87,7 @@
 			<td id="me4"></td>
 		</tr>
 	</table>
+	<button onclick="sales()">Calculate</button>
 
 
 
