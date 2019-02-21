@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Third homework of the CNIT-133 class">
+  	<meta name="keywords" content="HTML and CSS">
+	<title>Homework 3</title>
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../assets/hm3.js"></script>
+	<link rel="stylesheet" type="text/css" href="../assets/style.css">
+	<script type="text/javascript">
+		$(function() {
+			$(document).tooltip();
+		});
+
+		
+		function sales() {
+			var total1, total2, total3, total4, me1, me2, me3, me4, name, item1, item2, item3, item4;
+
+			total1 = item1 * 239.99;
+
+		}
+
+	</script>
+	<style type="text/css">
+		label {
+			display: inline-block;
+			/*width: 9em;*/
+		}
+		table {
+			background-color: white;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Homework 3 - Part 2</h1>
+		<h3>jQuery UI tooltip</h3>
+	</header>
+
+	<div id="showhide">Click to Show/Hide Instructions</div>
+	<div id="instructions">Create a webpage that contains a script that includes at the top of your form  a text box for the salesperson's name for the user to enter. When the user's mouse hovers over this name field, use the jQuery UI tooltip coding to display the message "Please make sure that the salesperson's name is spelled correctly". See this site for more about the jQuery UI tooltip (Links to an external site.)Links to an external site.. Next input that salesperson's items sold. Then calculates how much the salesperson sold and how much they earned, and then output the results. Be sure to round the outputted results to 2 decimal places. Use form text boxes to input the number sold for each of the items 1-4. You should also check for valid numeric input (make sure the number of items sold is never negative, < 0, as nobody sells negative number of items, right?) and right-justify all amounts. Here is a sample display (Links to an external site.)Links to an external site. using tables and form elements.</div>
+	
+	<p>
+		<label for="name">Enter the salesperson's name:</label>
+		<input type="text" id="name" title="Please make sure that the salesperson's name is spelled correctly">
+	</p>
+
+	<table>
+		<thead>
+			<th>Item</th>
+			<th>Value</th>
+			<th>Sold</th>
+			<th>Total</th>
+			<th>Money Earned</th>
+		</thead>
+		<tr>
+			<td>1</td>
+			<td>239.99</td>
+			<td><input type="number" id="item1" title="Please add how much from the Item 1 have you sold"></td>
+			<td id="total1"></td>
+			<td id="me1"></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>129.75</td>
+			<td><input type="number" id="item2" title="Please add how much from the Item 2 have you sold"></td>
+			<td id="total2"></td>
+			<td id="me2"></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>99.95</td>
+			<td><input type="number" id="item3" title="Please add how much from the Item 3 have you sold"></td>
+			<td id="total3"></td>
+			<td id="me3"></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>350.89</td>
+			<td><input type="number" id="item4" title="Please add how much from the Item 4 have you sold"></td>
+			<td id="total4"></td>
+			<td id="me4"></td>
+		</tr>
+	</table>
+
+
+
+
+
+</body>
+</html>
