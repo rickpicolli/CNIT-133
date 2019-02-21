@@ -5,25 +5,53 @@
 	<meta name="description" content="Third homework of the CNIT-133 class">
   	<meta name="keywords" content="HTML and CSS">
 	<title>Homework 3</title>
-	<link rel="stylesheet" type="text/css" href="assets/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="../assets/hm3.js"></script>
 	<link rel="stylesheet" type="text/css" href="../assets/style.css">
 	<script type="text/javascript">
-		$(function() {
-			$(document).tooltip();
-		});
 
-		
 		function sales() {
-			var total1, total2, total3, total4, me1, me2, me3, me4, name, item1, item2, item3, item4;
+			var total1, total2, total3, total4, me1, me2, me3, me4, name, item1, item2, item3, item4, value1, value2, value3, value4, toe;
 
 			item1 = parseInt(document.getElementById("item1").value);
 			item2 = parseInt(document.getElementById("item2").value);
 			item3 = parseInt(document.getElementById("item3").value);
 			item4 = parseInt(document.getElementById("item4").value);
 
+		
+
+			value1 = 239.99;
+			value2 = 129.75;
+			value3 = 99.95;
+			value4 = 350.89;
+
+			total1 = (item1 * value1).toFixed(2);
+			total2 = (item2 * value2).toFixed(2);
+			total3 = (item3 * value3).toFixed(2);
+			total4 = (item4 * value4).toFixed(2);
+
+			me1 = (total1*0.09).toFixed(2);
+			me2 = (total2*0.09).toFixed(2);
+			me3 = (total3*0.09).toFixed(2);
+			me4 = (total4*0.09).toFixed(2);
+
+			toe = (200 + +me1 + +me2 + +me3 + +me4).toFixed(2);
+
+			document.getElementById("total1").innerHTML = total1;
+			document.getElementById("total2").innerHTML = total2;
+			document.getElementById("total3").innerHTML = total3;
+			document.getElementById("total4").innerHTML = total4;
+
+			document.getElementById("me1").innerHTML = me1;
+			document.getElementById("me2").innerHTML = me2;
+			document.getElementById("me3").innerHTML = me3;
+			document.getElementById("me4").innerHTML = me4;
+
+
+			document.getElementById("toe").innerHTML = toe;
+
 		}
+
 
 	</script>
 	<style type="text/css">
@@ -41,9 +69,6 @@
 		<h1>Homework 3 - Part 2</h1>
 		<h3>jQuery UI tooltip</h3>
 	</header>
-
-	<div id="showhide">Click to Show/Hide Instructions</div>
-	<div id="instructions">Create a webpage that contains a script that includes at the top of your form  a text box for the salesperson's name for the user to enter. When the user's mouse hovers over this name field, use the jQuery UI tooltip coding to display the message "Please make sure that the salesperson's name is spelled correctly". See this site for more about the jQuery UI tooltip (Links to an external site.)Links to an external site.. Next input that salesperson's items sold. Then calculates how much the salesperson sold and how much they earned, and then output the results. Be sure to round the outputted results to 2 decimal places. Use form text boxes to input the number sold for each of the items 1-4. You should also check for valid numeric input (make sure the number of items sold is never negative, < 0, as nobody sells negative number of items, right?) and right-justify all amounts. Here is a sample display (Links to an external site.)Links to an external site. using tables and form elements.</div>
 	
 	<p>
 		<label for="name">Enter the salesperson's name:</label>
@@ -85,6 +110,13 @@
 			<td><input type="number" id="item4" title="Please add how much from the Item 4 have you sold"></td>
 			<td id="total4"></td>
 			<td id="me4"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>Total of earnings of this week:</td>
+			<td id="toe"></td>
 		</tr>
 	</table>
 	<button onclick="sales()">Calculate</button>
