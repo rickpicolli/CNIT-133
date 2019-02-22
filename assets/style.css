@@ -127,3 +127,11 @@ th {
   padding: 50px;
   display: none;
 }
+
+label {
+	display: inline-block;
+}
+
+table {
+	background-color: white;
+}

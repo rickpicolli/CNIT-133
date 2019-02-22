@@ -1,4 +1,6 @@
-
+// *****************************************************
+// logic for the hw3 - part 1
+// *****************************************************
 
 
 
@@ -49,3 +51,61 @@ $(document).ready(function(){
     $("#instructions").slideToggle("slow");
   });
 });
+
+
+
+
+// *****************************************************
+// logic for the hw3 - part 2
+// *****************************************************
+
+
+function sales() {
+	var total1, total2, total3, total4, me1, me2, me3, me4, name, item1, item2, item3, item4, value1, value2, value3, value4, toe;
+
+	item1 = parseInt(document.getElementById("item1").value);
+	item2 = parseInt(document.getElementById("item2").value);
+	item3 = parseInt(document.getElementById("item3").value);
+	item4 = parseInt(document.getElementById("item4").value);
+
+
+	if (isNaN(item1) || isNaN(item2) || isNaN(item3) || isNaN(item4) || item1 < 0 || item2 < 0 || item3 < 0 || item4 < 0) {
+
+		text = "The inputs should be a positive number";
+	} else {
+
+
+	value1 = 239.99;
+	value2 = 129.75;
+	value3 = 99.95;
+	value4 = 350.89;
+
+	total1 = (item1 * value1).toFixed(2);
+	total2 = (item2 * value2).toFixed(2);
+	total3 = (item3 * value3).toFixed(2);
+	total4 = (item4 * value4).toFixed(2);
+
+	me1 = (total1*0.09).toFixed(2);
+	me2 = (total2*0.09).toFixed(2);
+	me3 = (total3*0.09).toFixed(2);
+	me4 = (total4*0.09).toFixed(2);
+
+	toe = (200 + +me1 + +me2 + +me3 + +me4).toFixed(2);
+
+	document.getElementById("total1").innerHTML = total1;
+	document.getElementById("total2").innerHTML = total2;
+	document.getElementById("total3").innerHTML = total3;
+	document.getElementById("total4").innerHTML = total4;
+
+	document.getElementById("me1").innerHTML = me1;
+	document.getElementById("me2").innerHTML = me2;
+	document.getElementById("me3").innerHTML = me3;
+	document.getElementById("me4").innerHTML = me4;
+
+
+	document.getElementById("toe").innerHTML = toe;
+
+	}
+
+	document.getElementById("msg").innerHTML = text;
+}
