@@ -109,3 +109,39 @@ function sales() {
 
 	document.getElementById("msg").innerHTML = text;
 }
+
+
+
+
+// *****************************************************
+// logic for the hw3 - part 3
+// *****************************************************
+
+
+
+
+
+
+function celsius() {
+
+			var celsius, fahrenheit;
+
+			fahrenheit = parseInt(document.getElementById("fahrenheit").value);
+				
+			celsius = 5/9 * (fahrenheit - 32);
+
+			document.getElementById("result2").innerHTML = celsius;
+
+		}
+
+		function fahrenheit() {
+
+			var celsius, fahrenheit;
+
+			celsius = parseInt(document.getElementById("celsius").value);
+
+			fahrenheit = (9/5 * celsius) + 32;
+
+			document.getElementById("result1").innerHTML = fahrenheit;
+
+		}

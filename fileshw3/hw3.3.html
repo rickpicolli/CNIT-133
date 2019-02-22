@@ -8,16 +8,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="../assets/hm3.js"></script>
 	<link rel="stylesheet" type="text/css" href="../assets/style.css">
-	<script type="text/javascript">
-		function conversion() {
-			var celsius, fahrenheit;
-
-			celsius = 5/9 * (fahrenheit - 32);
-
-			fahrenheit = (9/5 * celsius) + 32;
-		}
-		
-	</script>
 
 </head>
 <body>
@@ -25,6 +15,29 @@
 		<h1>Homework 3 - Part 3</h1>
 		<h3>Temperature Conversion</h3>
 	</header>
+
+	<p>
+		Input a temperature in Celsius: 
+		<input type="number" id="celsius">
+	</p>
+	<input type="button" value="Conversion" onclick="fahrenheit()">
+
+	<p>
+		The value in Fahrenheit is:
+		<label id="result1"></label>
+	</p>
+
+
+	<p>
+		Input a temperature in Fahrenheit: 
+		<input type="number" id="fahrenheit">
+	</p>
+	<input type="button" value="Conversion" onclick="celsius()">
+
+	<p>
+		The value in Celsius is:
+		<label id="result2"></label>
+	</p>
 
 	
 
