@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Third homework of the CNIT-133 class">
+  	<meta name="keywords" content="HTML and CSS">
+	<title>Homework 3</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../assets/hm3.js"></script>
+	<link rel="stylesheet" type="text/css" href="../assets/style.css">
+
+
+<script type="text/javascript">
+	
+	var number1, number2;
+
+	function equations() {
+
+
+		number1 = Math.floor(Math.random() * 10);
+		number2 = Math.floor(Math.random() * 10);
+
+
+		document.getElementById("number1").innerHTML = number1;
+
+		document.getElementById("number2").innerHTML = number2;
+
+	
+
+	}
+
+	function studentAnswer() {
+
+
+	answer = document.getElementById("answer").value;
+
+	answer = parseInt(answer);
+
+		if (answer == number1 * number2) {
+			document.getElementById("returnanswer").innerHTML = "You got it right! congratulations!";
+			equations();
+		} else {
+			document.getElementById("returnanswer").innerHTML = "That's not the right answer. Please try again" ;
+		}
+
+	}
+
+</script>
+
+</head>
+<body onload="equations()">
+	<header>
+		<h1>Homework 3 - Part 4</h1>
+		<h3>Math Operations</h3>
+	</header>
+
+	<br>
+
+		<p>
+			How much is <label id="number1"></label> times <label id="number2"></label> ?
+		</p>
+
+
+		<p>
+			Answer: 
+			<input type="number" id="answer">
+		
+
+		<button id="result" onclick="studentAnswer()" value="Result" return False>Result</button>
+		</p>
+
+		<p id="returnanswer"></p>
+
+
+<br><br>
+
+	<ul>
+		<li>
+			<a href="../hw3.html" class="button">Back to main page</a>
+		</li>
+	</ul>		
+
+</body>
+</html>

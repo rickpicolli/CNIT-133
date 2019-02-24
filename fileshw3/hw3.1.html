@@ -18,34 +18,44 @@
 	<div id="showhide">Click to Show/Hide Instructions</div>
 	<div id="instructions">The following webpage contains the heading, Student Grades, and uses a script that inputs a student's homework average, mid-term exam score, final exam score, and ACR (all as integers)'. Calculate the student's final average according to the formula: final average = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.1 * ACR)</div>
 	
-	<p> Input your homework average:</p>
-	<p>		
-		<input type="number" id="number1">
-	</p>
-	<p> Input your mid-term exam score:</p>
-	<p>		
-		<input type="number" id="number2">
-	</p>
-	<p> Input your final exam score:</p>
-	<p>		
-		<input type="number" id="number3">
-	</p>
-	<p> Input your ACR:</p>
-	<p>		
-		<input type="number" id="number4">
-	</p>
+	<div id="flexbox">
 
-	<button type="button" onclick="grades()">Submit</button>
+		<div>	
 
-	<p id="msg"></p>
-	
-	<p> Your Final Grade is: </p>
-	<p>
-		<input type="number" id="favg" readonly="readonly">
-	</p>
-	<p> Your Final Letter is: </p>
-	<p id="grade"></p>
-	<p id="result"></p>
+			<p> Input your homework average:</p>
+			<p>		
+				<input type="number" id="number1">
+			</p>
+			<p> Input your mid-term exam score:</p>
+			<p>		
+				<input type="number" id="number2">
+			</p>
+			<p> Input your final exam score:</p>
+			<p>		
+				<input type="number" id="number3">
+			</p>
+			<p> Input your ACR:</p>
+			<p>		
+				<input type="number" id="number4">
+			</p>
+
+			<button type="button" onclick="grades()">Submit</button>
+		</div>
+
+		<div>
+
+			<p id="msg" style="color: red"></p>
+			
+			<p> Your Final Grade is: </p>
+			<p>
+				<input type="number" id="favg" readonly="readonly">
+			</p>
+			<p> Your Final Letter is: </p>
+			<p id="grade"></p>
+			<p id="result"></p>
+
+		</div>
+	</div>
 	
 	
 

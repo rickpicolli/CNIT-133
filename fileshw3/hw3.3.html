@@ -16,29 +16,50 @@
 		<h3>Temperature Conversion</h3>
 	</header>
 
+	<div id="flexbox">
+
+		<div id="boxes">
+
 	<p>
 		Input a temperature in Celsius: 
 		<input type="number" id="celsius">
+	
+	<input type="button" value="Conversion" onclick="fahrenheit()" style="background-color: lightgreen">
 	</p>
-	<input type="button" value="Conversion" onclick="fahrenheit()">
+
 
 	<p>
 		The value in Fahrenheit is:
 		<label id="result1"></label>
 	</p>
 
+	</div>
+
+
+<div id="boxes">
+
 
 	<p>
 		Input a temperature in Fahrenheit: 
 		<input type="number" id="fahrenheit">
+	
+	<input type="button" value="Conversion" onclick="celsius()" style="background-color: lightgreen">
 	</p>
-	<input type="button" value="Conversion" onclick="celsius()">
 
 	<p>
 		The value in Celsius is:
 		<label id="result2"></label>
 	</p>
 
+</div>
+</div>
+
+
+	<ul>
+		<li>
+			<a href="../hw3.html" class="button">Back to main page</a>
+		</li>
+	</ul>		
 	
 
 

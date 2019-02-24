@@ -135,3 +135,21 @@ label {
 table {
 	background-color: white;
 }
+
+#flexbox {
+	display: flex;
+	align-content: center;
+	
+}
+
+#boxes {
+	border-style: solid;
+  	border-color: green;
+  	background-color: lightblue;
+
+}
+
+#conversion {
+	align-items: center;
+  justify-content: center;
+}
