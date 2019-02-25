@@ -145,3 +145,45 @@ function celsius() {
 			document.getElementById("result1").innerHTML = fahrenheit;
 
 		}
+
+
+
+// *****************************************************
+// logic for the hw3 - part 3
+// *****************************************************
+
+
+
+
+var number1, number2;
+
+function equations() {
+
+
+	number1 = Math.floor(Math.random() * 10);
+	number2 = Math.floor(Math.random() * 10);
+
+
+	document.getElementById("number1").innerHTML = number1;
+
+	document.getElementById("number2").innerHTML = number2;
+
+
+
+}
+
+function studentAnswer() {
+
+
+answer = document.getElementById("answer").value;
+
+answer = parseInt(answer);
+
+	if (answer == number1 * number2) {
+		document.getElementById("returnanswer").innerHTML = "You got it right! congratulations!";
+		equations();
+	} else {
+		document.getElementById("returnanswer").innerHTML = "That's not the right answer. Please try again" ;
+	}
+
+}
