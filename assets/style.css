@@ -142,7 +142,7 @@ table {
 	
 }
 
-#boxes {
+#box1, #box2 {
 	border-style: solid;
   	border-color: green;
   	background-color: lightblue;
