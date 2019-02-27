@@ -1,7 +1,5 @@
 # CNIT-133
 
-# B.U.M.
-
 ## Description
 
 This repository is about a CNIT-133 JavaScript class that I'm taking at City College that will include many exercises during the period of the class, where I'll be practicing and using my previous skills and using new things there I'll be learning in the class.
