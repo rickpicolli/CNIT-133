@@ -187,3 +187,28 @@ answer = parseInt(answer);
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+window.onload = function partOne() {
+			var sum = 0;
+			var product = 1;
+
+			for (x = 5; x<= 20; x+=3) {
+				sum += x;
+				product *= x;
+
+				document.getElementById("p1a").innerHTML = "5 + 8 + 11 + 14 + 17 + 20 = " + sum;
+				document.getElementById("p1b").innerHTML = "5 * 8 * 11 * 14 * 17 * 20 = "  + product;
+			
+
+			};
+
+		}
