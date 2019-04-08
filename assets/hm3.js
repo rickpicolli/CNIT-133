@@ -198,17 +198,36 @@ answer = parseInt(answer);
 
 
 window.onload = function partOne() {
-			var sum = 0;
-			var product = 1;
+	var sum = 0;
+	var product = 1;
 
-			for (x = 5; x<= 20; x+=3) {
-				sum += x;
-				product *= x;
+	for (x = 5; x<= 20; x+=3) {
+		sum += x;
+		product *= x;
 
-				document.getElementById("p1a").innerHTML = "5 + 8 + 11 + 14 + 17 + 20 = " + sum;
-				document.getElementById("p1b").innerHTML = "5 * 8 * 11 * 14 * 17 * 20 = "  + product;
-			
+		document.getElementById("p1a").innerHTML = "5 + 8 + 11 + 14 + 17 + 20 = " + sum;
+		document.getElementById("p1b").innerHTML = "5 * 8 * 11 * 14 * 17 * 20 = "  + product;
 
-			};
+	}
 
-		}
+	var sum2 = 0;
+	var product2 = 1;
+	var y = 3;
+
+	while (y <= 31) {
+		sum2 += y;
+		product2 *= y;
+		y = y + 4;
+
+		document.getElementById("p2a").innerHTML = "3 + 7 + 11 + 15 + 19 + 23 + 27 + 31 = " + sum2;
+		document.getElementById("p2b").innerHTML = "3 * 7 * 11 * 15 * 19 * 23 * 27 * 31 = "  + product2;
+	
+}
+
+
+};
+
+$(function() {
+	$("draggable").draggable();
+});
+
