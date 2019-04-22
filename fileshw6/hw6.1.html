@@ -5,7 +5,7 @@
 	<meta name="description" content="Future homework of the CNIT-133 class">
   	<meta name="keywords" content="HTML and CSS">
 	<title>Homework 6 - part 1</title>
-	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="assets/style.css"> -->
 </head>
 
 <body>
@@ -67,7 +67,7 @@ function roundNumberFunc() {
 	<fieldset>
 		<p>Input a number to get the square root of it</p>
 		<input type="number" name="sqrt number" id="sqrtInput">
-		<input type="button" name="Calculate" value="Calculate" id="roundButton" onclick="sqrtRootFunc()">
+		<input type="button" name="Calculate" value="Calculate" id="sqrtButton" onclick="sqrtRootFunc()">
 		<input type="button" name="Clear" value="Clear" id="clearButton" onclick='document.getElementById("sqrtInput").value="";
       location="#part-1";
       location.reload()'>
@@ -105,6 +105,47 @@ function roundNumberFunc() {
 <div>
 	
 	<p>C) round the floating-point number to the nearest tenths, hunderdths, thousandths position</p>
+	<hr><br>
+
+	<form id="thtNumbers">
+		<fieldset>
+			<p>input a number with at least 3 decimals numbers</p>
+			<input type="number" name="tht Numbers" id="thtInput">
+			<input type="button" name="Calculate" value="Calculate" id="thtButton" onclick="thtFunc()">
+			<input type="button" name="Clear" value="Clear" id="clearButton" onclick='document.getElementById("thtInput").value="";
+      		location="#part-1";
+      		location.reload()'>
+
+      		<div id="thtResult"></div>
+
+		</fieldset>
+	</form>
+
+
+	<script>
+	
+		function thtFunc() {
+			var textResult3 = "";
+			var thtInput = document.getElementById("thtInput").value;
+			thtInput = parseFloat(thtInput);
+			var outputResult3 = document.getElementById("thtResult");
+			var tenths = Math.floor(thtInput * 10 + .5) / 10;
+			var hundredths = Math.floor(thtInput * 100 + .5) / 100;
+			var thousandths = Math.floor(thtInput * 1000 + .5) / 1000;
+
+			console.log("hi");
+
+			textResult3 = "<p>The number that you chose was " + thtInput + "</p>";
+			textResult3 += "<p>Your number rounded to the nearest tenth is " + tenths + "</p>";
+			textResult3 += "<p>Your number rounded to the nearest hundredth is " + hundredths + "</p>";
+			textResult3 += "<p>Your number rounded to the nearest thousandth is " + thousandths + "</p>";
+
+			outputResult3.innerHTML = textResult3; 
+		}
+			
+
+
+	</script>
 
 </div>
 
