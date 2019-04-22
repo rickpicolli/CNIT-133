@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Future homework of the CNIT-133 class">
+  	<meta name="keywords" content="HTML and CSS">
+	<title>Homework 6 - part 1</title>
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+
+<body>
+
+
+<div id="part-1">
+            
+<p>
+  A) round the floating-point number to the nearest integer
+</p>
+<hr><br>
+
+
+<form id="roundNumbers">
+	<fieldset>
+		<p>Input a decimal number to get the closest rounded number</p>
+		<input type="number" name="decimal number" id="decimalInput">
+		<input type="button" name="Round Number" value="Round Number" id="roundButton" onclick="roundNumberFunc()">
+		<input type="button" name="Clear" value="Clear" id="clearButton" onclick='document.getElementById("decimalInput").value="";
+      location="#part-1";
+      location.reload()'>
+
+      <div id="roundResult"></div>
+		
+	</fieldset>
+
+
+</form>
+
+<script> 
+
+function roundNumberFunc() {
+	var textResult = "";
+	var outputResult = document.getElementById('roundResult');
+	var numInput = document.getElementById('decimalInput').value;
+	numInput = parseFloat(numInput);
+
+	textResult = "<p>The number that you chose was " + numInput + "</p>";
+	textResult += "<p>Your rounded number is " + Math.round(numInput) + "</p>";
+
+	outputResult.innerHTML = textResult; 
+
+}
+
+
+</script>
+
+</div>
+<br><br>
+
+<div>
+<p>
+  B) calculate the square root of the floating-point number and round it to an integer
+</p>
+<hr><br>
+
+
+<form id="sqrtNumbers">
+	<fieldset>
+		<p>Input a number to get the square root of it</p>
+		<input type="number" name="sqrt number" id="sqrtInput">
+		<input type="button" name="Calculate" value="Calculate" id="roundButton" onclick="sqrtRootFunc()">
+		<input type="button" name="Clear" value="Clear" id="clearButton" onclick='document.getElementById("sqrtInput").value="";
+      location="#part-1";
+      location.reload()'>
+
+      <div id="sqrtResult"></div>
+		
+	</fieldset>
+
+
+</form>
+
+<script>
+	
+	function sqrtRootFunc() {
+		var textResult2 = "";
+		var sqrtInput = document.getElementById("sqrtInput").value;
+		sqrtInput = parseFloat(sqrtInput);
+		var outputResult2 = document.getElementById("sqrtResult");
+		var sqrt = Math.sqrt(sqrtInput);
+		var sqrtResult = Math.round(sqrt);
+
+		textResult2 = "<p>The number that you chose was " + sqrtInput + "</p>";
+		textResult2 += "<p>Your the square root of the number is " + sqrt + "</p>";
+		textResult2 += "<p>Your rounded square root number is " + sqrtResult + "</p>";
+
+		outputResult2.innerHTML = textResult2; 
+	}
+		
+
+
+</script>
+	
+</div>
+
+<div>
+	
+	<p>C) round the floating-point number to the nearest tenths, hunderdths, thousandths position</p>
+
+</div>
+
+
+</body>
+</html>
