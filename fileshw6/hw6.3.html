@@ -6,6 +6,7 @@
   	<meta name="keywords" content="HTML and CSS">
 	<title>Homework 6 - part 3</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 	<script src="../assets/hw6.js"></script>
 	  
 </head>
@@ -54,9 +55,7 @@
         <legend>Phone Number</legend>
         <p>
           Input your phone number:
-          <input type="number" name="phone number" id="userPhoneNumber">
-          <!-- <input  id='userPhoneNumber' class='phoneNum eight-hlf-em 
-          margin_top_5'> -->
+          <input type="text" name="phone-number" id="userPhoneNumber">
         </p>
         <p>
           <input type='button' value='Parse Phone'
@@ -67,22 +66,25 @@
 
         <script>
 
-
-        	  var numSplit=userPhoneNumber.split(') ');
-              var phoneOnly = numSplit[1];
-              var phoneOnlyArray = phoneOnly.split('-');
-              var prefix=phoneOnlyArray[0];
-              var lineNum=phoneOnlyArray[1];
-              var roughAreaCode = numSplit[0];
-              var areaCodeArray = roughAreaCode.split('(');
-              var areaCode=areaCodeArray.pop();
-
-        
+    $('input[name="phone-number"]').mask('(000) 000-0000');
 
           function splitDigits() {
+
+          	var number = document.getElementById('userPhoneNumber').value;
+			var numSplit = number.split(') ');
+			var phoneOnly = numSplit[1];
+			var phoneOnlyArray = phoneOnly.split('-');
+            var prefix=phoneOnlyArray[0];
+            var lineNum=phoneOnlyArray[1];
+            var roughAreaCode = numSplit[0];
+            var areaCodeArray = roughAreaCode.split('(');
+            var areaCode=areaCodeArray.pop();
+			console.log(numSplit);
+
+
             var userPhoneNumber=
               document.getElementById('userPhoneNumber').value;
-            if (userPhoneNumber.length != 9) {
+            if (userPhoneNumber.length != 14) {
               alert('Please input your full phone number.\n'+
               'There should be a total of 10 digits.');
               return;
