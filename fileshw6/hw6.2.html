@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="Future homework of the CNIT-133 class">
+	<meta name="description" content="Homework of the CNIT-133 class">
   	<meta name="keywords" content="HTML and CSS">
 	<title>Homework 6 - part 2</title>
 	<!-- <link rel="stylesheet" type="text/css" href="assets/style.css"> -->
+  <script src="../assets/hw6.js"></script>
 </head>
 <body>
 
@@ -27,50 +28,9 @@
 	  </fieldset>
 	</form>
 
-         
-<script>
-  function charSearch() {
-    var character=document.getElementById('character').value;
-    character=character.toLowerCase();
-    var stringToSearch=
-    document.getElementById('textInput').value;
-    stringToSearch=stringToSearch.toLowerCase();
-    var count=0;
-
-    for (var i=0, len=stringToSearch.length; i<len; i++) {
-      if (stringToSearch.charAt(i) == character) {
-        count++;
-      }
-    }
-
-    if (count == 0) {
-      var noChar='<html>\n';
-      noChar += '<head>\n';
-      noChar += '<title>ERROR! There was no match for this letter</title>\n';
-      noChar += '</head>\n';
-      noChar += '<body>\n';
-      noChar += '<div><p>'
-      noChar += 'There was no match ("'+ 
-      document.getElementById('character').value +
-      '") not found in text string!</p>';
-      noChar += '<input type="button" '+
-      'onclick="window.close()" value="Close"></div>';
-      noChar += '</body>\n</html>';
-  
-      var noHitsWindow = window.open('', 'hit_result', 
-      'left=400,width=300,height=100');
-  
-      noHitsWindow.focus();
-      noHitsWindow.document.write(noChar);
-      noHitsWindow.document.close();
-    } else {
-      document.getElementById('displaySearchCount').value=count;
-    }
-  }
-</script>
 </div>
 
-
+<span style="color: red"></span>
 
 
 </body>

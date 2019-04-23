@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="Future homework of the CNIT-133 class">
+	<meta name="description" content="Homework of the CNIT-133 class">
   	<meta name="keywords" content="HTML and CSS">
 	<title>Homework 6 - part 1</title>
 	<!-- <link rel="stylesheet" type="text/css" href="assets/style.css"> -->
+	<script src="../assets/hw6.js"></script>
 </head>
 
 <body>
@@ -35,24 +36,6 @@
 
 </form>
 
-<script> 
-
-function roundNumberFunc() {
-	var textResult = "";
-	var outputResult = document.getElementById('roundResult');
-	var numInput = document.getElementById('decimalInput').value;
-	numInput = parseFloat(numInput);
-
-	textResult = "<p>The number that you chose was " + numInput + "</p>";
-	textResult += "<p>Your rounded number is " + Math.round(numInput) + "</p>";
-
-	outputResult.innerHTML = textResult; 
-
-}
-
-
-</script>
-
 </div>
 <br><br>
 
@@ -78,27 +61,6 @@ function roundNumberFunc() {
 
 
 </form>
-
-<script>
-	
-	function sqrtRootFunc() {
-		var textResult2 = "";
-		var sqrtInput = document.getElementById("sqrtInput").value;
-		sqrtInput = parseFloat(sqrtInput);
-		var outputResult2 = document.getElementById("sqrtResult");
-		var sqrt = Math.sqrt(sqrtInput);
-		var sqrtResult = Math.round(sqrt);
-
-		textResult2 = "<p>The number that you chose was " + sqrtInput + "</p>";
-		textResult2 += "<p>Your the square root of the number is " + sqrt + "</p>";
-		textResult2 += "<p>Your rounded square root number is " + sqrtResult + "</p>";
-
-		outputResult2.innerHTML = textResult2; 
-	}
-		
-
-
-</script>
 	
 </div>
 
@@ -120,32 +82,6 @@ function roundNumberFunc() {
 
 		</fieldset>
 	</form>
-
-
-	<script>
-	
-		function thtFunc() {
-			var textResult3 = "";
-			var thtInput = document.getElementById("thtInput").value;
-			thtInput = parseFloat(thtInput);
-			var outputResult3 = document.getElementById("thtResult");
-			var tenths = Math.floor(thtInput * 10 + .5) / 10;
-			var hundredths = Math.floor(thtInput * 100 + .5) / 100;
-			var thousandths = Math.floor(thtInput * 1000 + .5) / 1000;
-
-			console.log("hi");
-
-			textResult3 = "<p>The number that you chose was " + thtInput + "</p>";
-			textResult3 += "<p>Your number rounded to the nearest tenth is " + tenths + "</p>";
-			textResult3 += "<p>Your number rounded to the nearest hundredth is " + hundredths + "</p>";
-			textResult3 += "<p>Your number rounded to the nearest thousandth is " + thousandths + "</p>";
-
-			outputResult3.innerHTML = textResult3; 
-		}
-			
-
-
-	</script>
 
 </div>
 
