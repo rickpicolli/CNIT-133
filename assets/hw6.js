@@ -109,39 +109,35 @@ function charSearch() {
 // *****************************************************
 
 
+// function date() {
+// 	var myDate = new Date();
+// var dateToString = myDate.toString();
+// var dateToLocale = myDate.toLocaleString();
+// var dateToUTC = myDate.toUTCString();
+// var diffESTvsUTC = (myDate.getTimezoneOffset()/60)-3;
 
-var myDate = new Date();
-var dateToString = myDate.toString();
-var dateToLocale = myDate.toLocaleString();
-var dateToUTC = myDate.toUTCString();
-var diffESTvsUTC = (myDate.getTimezoneOffset()/60)-3;
+// var dateOutputType;
+// dateOutputType = '<p>Current DATE using '+
+// '<span>toString()'+
+// '</span> method: <br>'+'<span>'+
+// dateToString+'</span>';
 
-var dateOutputType;
-dateOutputType = '<p class="leading-150">Current DATE using '+
-'<span class="mono-type fnt-bold fnt-plusQrtEm">toString()'+
-'</span> method: <br>'+'<span class="fnt-bold fnt-clr-navy">'+
-dateToString+'</span>';
+// var dateOutputType;
+// dateOutputType += '<p>Current DATE '+
+// 'using <span>'+
+// 'dateToLocale()</span> method:<br><span>' +dateToLocale+'</span>';
 
-var dateOutputType;
-dateOutputType += '<p class="leading-150">Current DATE '+
-'using <span class="mono-type fnt-bold fnt-plusQrtEm">'+
-'dateToLocale()</span> method:<br><span '+
-'class="fnt-bold fnt-clr-navy">'+dateToLocale+'</span>';
+// var dateOutputType;
+// dateOutputType += '<p>Current DATE '+
+// 'using <span>' + 'dateToUTC()</span> method:<br>'+'<span >'+dateToUTC+'</span>';
 
-var dateOutputType;
-dateOutputType += '<p class="leading-150">Current DATE '+
-'using <span class="mono-type fnt-bold fnt-plusQrtEm">'+
-'dateToUTC()</span> method:<br>'+'<span '+
-'class="fnt-bold fnt-clr-navy">'+dateToUTC+'</span>';
+// var dateOutputType;
+// dateOutputType += '<p>The difference '+
+// 'between Eastern Standard Time and UTC is:<br><span>'+diffESTvsUTC+' hours</span>';
 
-var dateOutputType;
-dateOutputType += '<p class="leading-150">The difference '+
-'between Eastern Standard Time and UTC is:<br><span '+
-'class="fnt-bold fnt-clr-navy">'+diffESTvsUTC+' hours</span>';
-
-document.getElementById('dateOutput').innerHTML=
-dateOutputType;
-              
+// document.getElementById('dateOutput').innerHTML=
+// dateOutputType;
+// }              
           
 
 function splitDigits() {

@@ -25,27 +25,23 @@
           var diffESTvsUTC = (myDate.getTimezoneOffset()/60)-3;
       
           var dateOutputType;
-          dateOutputType = '<p class="leading-150">Current DATE using '+
-          '<span class="mono-type fnt-bold fnt-plusQrtEm">toString()'+
-          '</span> method: <br>'+'<span class="fnt-bold fnt-clr-navy">'+
+          dateOutputType = '<p>Current DATE using '+
+          '<span>toString()'+
+          '</span> method: <br>'+'<span>'+
           dateToString+'</span>';
 
           var dateOutputType;
-          dateOutputType += '<p class="leading-150">Current DATE '+
-          'using <span class="mono-type fnt-bold fnt-plusQrtEm">'+
-          'dateToLocale()</span> method:<br><span '+
-          'class="fnt-bold fnt-clr-navy">'+dateToLocale+'</span>';
+          dateOutputType += '<p>Current DATE '+
+          'using <span>'+
+          'dateToLocale()</span> method:<br><span>' +dateToLocale+'</span>';
 
           var dateOutputType;
-          dateOutputType += '<p class="leading-150">Current DATE '+
-          'using <span class="mono-type fnt-bold fnt-plusQrtEm">'+
-          'dateToUTC()</span> method:<br>'+'<span '+
-          'class="fnt-bold fnt-clr-navy">'+dateToUTC+'</span>';
+          dateOutputType += '<p>Current DATE '+
+          'using <span>' + 'dateToUTC()</span> method:<br>'+'<span >'+dateToUTC+'</span>';
 
           var dateOutputType;
-          dateOutputType += '<p class="leading-150">The difference '+
-          'between Eastern Standard Time and UTC is:<br><span '+
-          'class="fnt-bold fnt-clr-navy">'+diffESTvsUTC+' hours</span>';
+          dateOutputType += '<p>The difference '+
+          'between Eastern Standard Time and UTC is:<br><span>'+diffESTvsUTC+' hours</span>';
 
           document.getElementById('dateOutput').innerHTML=
             dateOutputType;
@@ -53,33 +49,26 @@
         </script>
       </fieldset> 
       <br>
+
       <fieldset>
         <legend>Phone Number</legend>
         <p>
           Input your phone number:
-          <input id='userPhoneNum' class='phoneNum eight-hlf-em 
-          margin_top_5'>
+          <input type="number" name="phone number" id="userPhoneNumber">
+          <!-- <input  id='userPhoneNumber' class='phoneNum eight-hlf-em 
+          margin_top_5'> -->
         </p>
         <p>
           <input type='button' value='Parse Phone'
           onclick='splitDigits()'>
           <input type="reset" name="reset" value="Reset">
         </p>
-        <div id='phoneNumTextOutput' class='cnt'></div>
+        <div id='phoneNumTextOutput'></div>
 
         <script>
 
-        
 
-          function splitDigits() {
-            var userPhoneNum=
-              document.getElementById('userPhoneNum').value;
-            if (userPhoneNum.length != 14) {
-              alert('Please input your full phone number.\n'+
-              'There should be a total of 10 digits.');
-              return;
-            } else {
-              var numSplit=userPhoneNum.split(') ');
+        	  var numSplit=userPhoneNumber.split(') ');
               var phoneOnly = numSplit[1];
               var phoneOnlyArray = phoneOnly.split('-');
               var prefix=phoneOnlyArray[0];
@@ -87,25 +76,34 @@
               var roughAreaCode = numSplit[0];
               var areaCodeArray = roughAreaCode.split('(');
               var areaCode=areaCodeArray.pop();
-          
+
+        
+
+          function splitDigits() {
+            var userPhoneNumber=
+              document.getElementById('userPhoneNumber').value;
+            if (userPhoneNumber.length != 9) {
+              alert('Please input your full phone number.\n'+
+              'There should be a total of 10 digits.');
+              return;
+            } else {          
               var phoneNumText=
               '<br><p>The area code extracted from your phone number '+
-              'is: <span class="fnt-bold fnt-clr-navy leading-150">'+
+              'is: <span>'+
               '<br>'+areaCode+'</span></p>';
 
               phoneNumText +=
               '<p>The prefix extracted from your phone number is: '+
-              '<span class="fnt-bold fnt-clr-navy leading-150"><br>'+
+              '<span><br>'+
               prefix+'</span></p>';
           
               phoneNumText +=
               '<p>The line number extracted from your phone number '+
-              'is: <span class="fnt-bold fnt-clr-navy leading-150">'+
+              'is: <span>'+
               '<br>'+lineNum+'</span></p>';
             }
 
-            document.getElementById('phoneNumTextOutput').innerHTML=
-            phoneNumText;
+            document.getElementById('phoneNumTextOutput').innerHTML=phoneNumText;
           }
         </script>
       </fieldset>
