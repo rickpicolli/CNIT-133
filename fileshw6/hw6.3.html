@@ -90,19 +90,14 @@
               return;
             } else {          
               var phoneNumText=
-              '<br><p>The area code extracted from your phone number '+
-              'is: <span>'+
-              '<br>'+areaCode+'</span></p>';
+              '<br><p>The area code from the phone you provided is: <span style="color: blue">'+areaCode+'</span></p>';
 
               phoneNumText +=
-              '<p>The prefix extracted from your phone number is: '+
-              '<span><br>'+
+              '<p>The prefix from the phone you provided is: <span style="color: blue">'+
               prefix+'</span></p>';
           
               phoneNumText +=
-              '<p>The line number extracted from your phone number '+
-              'is: <span>'+
-              '<br>'+lineNum+'</span></p>';
+              '<p>The line number from the phone you provided is: <span style="color: blue">'+lineNum+'</span></p>';
             }
 
             document.getElementById('phoneNumTextOutput').innerHTML=phoneNumText;
@@ -112,6 +107,12 @@
     </form>
     
   </div>
+
+  <ul>
+		<li>
+			<a href="../hw6.html" class="button">Back to main page</a>
+		</li>
+	</ul>		
 
 
 </body>

@@ -140,39 +140,44 @@ function charSearch() {
 // }              
           
 
-function splitDigits() {
-var userPhoneNum=
-  document.getElementById('userPhoneNum').value;
-if (userPhoneNum.length != 14) {
-  alert('Please input your full phone number.\n'+
-  'There should be a total of 10 digits.');
-  return;
-} else {
-  var numSplit=userPhoneNum.split(') ');
-  var phoneOnly = numSplit[1];
-  var phoneOnlyArray = phoneOnly.split('-');
-  var prefix=phoneOnlyArray[0];
-  var lineNum=phoneOnlyArray[1];
-  var roughAreaCode = numSplit[0];
-  var areaCodeArray = roughAreaCode.split('(');
-  var areaCode=areaCodeArray.pop();
+$('input[name="phone-number"]').mask('(000) 000-0000');
 
-  var phoneNumText=
-  '<br><p>The area code extracted from your phone number '+
-  'is: <span class="fnt-bold fnt-clr-navy leading-150">'+
-  '<br>'+areaCode+'</span></p>';
+          function splitDigits() {
 
-  phoneNumText +=
-  '<p>The prefix extracted from your phone number is: '+
-  '<span class="fnt-bold fnt-clr-navy leading-150"><br>'+
-  prefix+'</span></p>';
+          	var number = document.getElementById('userPhoneNumber').value;
+			var numSplit = number.split(') ');
+			var phoneOnly = numSplit[1];
+			var phoneOnlyArray = phoneOnly.split('-');
+            var prefix=phoneOnlyArray[0];
+            var lineNum=phoneOnlyArray[1];
+            var roughAreaCode = numSplit[0];
+            var areaCodeArray = roughAreaCode.split('(');
+            var areaCode=areaCodeArray.pop();
+			console.log(numSplit);
 
-  phoneNumText +=
-  '<p>The line number extracted from your phone number '+
-  'is: <span class="fnt-bold fnt-clr-navy leading-150">'+
-  '<br>'+lineNum+'</span></p>';
-}
 
-	document.getElementById('phoneNumTextOutput').innerHTML=
-	phoneNumText;
-}
+            var userPhoneNumber=
+              document.getElementById('userPhoneNumber').value;
+            if (userPhoneNumber.length != 14) {
+              alert('Please input your full phone number.\n'+
+              'There should be a total of 10 digits.');
+              return;
+            } else {          
+              var phoneNumText=
+              '<br><p>The area code extracted from your phone number '+
+              'is: <span>'+
+              '<br>'+areaCode+'</span></p>';
+
+              phoneNumText +=
+              '<p>The prefix extracted from your phone number is: '+
+              '<span><br>'+
+              prefix+'</span></p>';
+          
+              phoneNumText +=
+              '<p>The line number extracted from your phone number '+
+              'is: <span>'+
+              '<br>'+lineNum+'</span></p>';
+            }
+
+            document.getElementById('phoneNumTextOutput').innerHTML=phoneNumText;
+          }
