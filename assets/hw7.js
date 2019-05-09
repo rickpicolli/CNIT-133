@@ -127,3 +127,34 @@ window.onclick = function(event) {
   }
 }
 
+
+	$(document).ready(function() {
+		$('.answer').hide();
+		$('.main h2').toggle(
+		function() {
+		$(this).next('.answer').slideDown();
+		$(this).addClass('close');
+		},
+		function() {
+		$(this).next('.answer').fadeOut();
+		$(this).removeClass('close');
+		}
+		); // end toggle
+		}); // end ready
+
+
+
+
+	$('[data-fancybox="gallery"]').fancybox({
+	loop: true,
+	buttons: [
+    "zoom",
+    "share",
+    "slideShow",
+    "fullScreen",
+    "download",
+    "thumbs",
+    "close"
+  ],
+  animationEffect: "zoom-in-out"
+});
