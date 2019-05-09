@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Third homework of the CNIT-133 class">
+  	<meta name="keywords" content="HTML and CSS">
+	<title>Homework 5</title>
+	<link rel="stylesheet" type="text/css" href="../assets/style.css">
+</head>
+<body>
+
+<h2> Information about the states in the United States </h2>
+
+<p>Enter the name of a state to get some information about it.</p>
+
+<form>
+	<fieldset>
+		<legend>State Information</legend>
+		<label>Input the name of the state here:</label>
+		<label id="stoptions">(Please choose between Alabama, Alaska, Arizona, Arkansas, California or Colorado)</label>
+		<input type="text" name="stateInput" id="stateInput">
+		<input type="button" value="State Info" onclick="stateInfo()">
+
+		<p id="stateResult"></p>
+	</fieldset>
+</form>
+
+<script>
+	var stateTable = [
+                ['AL','ALABAMA','Montgomery','4,369,862'],
+                ['AK','ALASKA','Juneau','619,500'],
+                ['AZ','ARIZONA','Phoenix','4,778,332'],
+                ['AR','ARKANSAS','Little Rock','2,551,373'],
+                ['CA','CALIFORNIA','Sacramento','3,145,121'],
+                ['CO','COLORADO','Denver','4,056,133']
+              ];
+
+              function stateInfo() {
+              	var userInput = document.getElementById("stateInput").value;
+              	userInput = userInput.toUpperCase();
+
+              	var stateOutput = document.getElementById("stateResult");
+
+              	var foundState = false;
+              	var stateAbbr;
+              	var stateName;
+              	var stateCapital;
+              	var statePopulation;
+
+              	for (var i = 0, len=stateTable.length; i < len; i++) {
+              		if ( (stateTable[i][0] == userInput) || (stateTable[i][1] == userInput)) {
+              			stateAbbr = stateTable[i][0];
+              			stateName = stateTable[i][1];
+              			stateCapital = stateTable[i][2];
+              			statePopulation = stateTable[i][3];
+              			foundState = true;
+              			break;
+              		}
+              	}
+
+              	if (foundState == true) {
+              		stateOutput.innerHTML = 
+              		"<p>Thanks for your inquiry, here is the information you requested: </p>" +
+              		"<p>State abbr = " + stateAbbr + "</p>" + 
+              		"<p>State Name = " + stateName + "</p>" +
+              		"<p>Capital = " + stateCapital + "</p>" +
+              		"<p>Population = " + statePopulation + "</p>";
+              	} else {
+                  alert('Sorry! we don\'t have any information about this state that you asked in our system' +
+                  '\n\nPlease choose from the following states: Alabama, ' + 
+                  'Alaska, Arizona, Arkansas, California and Colorado');
+                  
+                }
+              }
+</script>
+
+
+<ul>
+		<li>
+			<a href="../hw5.html" class="button">Back to main page</a>
+		</li>
+	</ul>	
+</body>
+</html>
