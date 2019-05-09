@@ -5,261 +5,30 @@
 	<meta name="description" content="Future homework of the CNIT-133 class">
   	<meta name="keywords" content="HTML and CSS">
 	<title>Homework 7</title>
-	<!-- <link rel="stylesheet" type="text/css" href="assets/hw7.css"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="../assets/style.css"> -->
+	<link rel="stylesheet" type="text/css" href="assets/hw7.css">
+	<script src="assets/hw7.js"></script>
 	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
 	<link rel="stylesheet" href="assets/jquery.fancybox.min.css">
 	<script src="assets/jquery.fancybox.min.js"></script>
-	<!-- <script src="assets/jquery-3.2.1.min.js"></script> -->
+
 	<script>
-$(document).ready(function() {
-$('.answer').hide();
-$('.main h2').toggle(
-function() {
-$(this).next('.answer').slideDown();
-$(this).addClass('close');
-},
-function() {
-$(this).next('.answer').fadeOut();
-$(this).removeClass('close');
-}
-); // end toggle
-}); // end ready
-</script>
- <style>
+		$(document).ready(function() {
+		$('.answer').hide();
+		$('.main h2').toggle(
+		function() {
+		$(this).next('.answer').slideDown();
+		$(this).addClass('close');
+		},
+		function() {
+		$(this).next('.answer').fadeOut();
+		$(this).removeClass('close');
+		}
+		); // end toggle
+		}); // end ready
 
-/******************************************/
-/*************** Part 1 *******************
-******************************************/
+	</script>
 
 
-* {
-  box-sizing: border-box;
-  
-}
-
-body {
-  font-family: Verdana, serif;
-  background-image: url("assets/bg.jpg");
-  background-position: center center;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-h2 {
-	color: blue;
-}
-
-h4 {
-	margin: 15px 0px;
-}
-
-h1, div.answer {
-	text-align: center;
-}
-
-span,
-main {
-  background-color: white;  
-  color: var(--text, black);
-}
-
-span { font-weight: bold; }
-       
-main {
-  --gradDark: lightgrey; 
-  --gradLight: white; 
-  background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
-  padding: 10px 10px 10px 10px;
-  height: 15vh;
-  font-size: 16px;
-
-}
-		
-h1 { font-size: 1.2rem; display: inline; }
-
-
-#themeSwitchmoon:checked ~ main,
-#themeSwitchmoon:checked ~ label {
-  --text: white;
-}
-
-#themeSwitchsun:checked ~ main { 
-  --gradDark: lightyellow; 
-  --gradLight: #FAC957; 
-}
-
-#themeSwitchmoon:checked ~ main { 
-  --gradDark: blue; 
-  --gradLight: lightblue; 
-}
-
-#themeSwitchsun::after {
-  right: 50%; 
-  margin-left: 35px;
-  color: goldenrod;
-    line-height: 30px;
-    height: 30px;
-    font-size: 2em;
-}
-
-#themeSwitchmoon::after {
-  right: 100%;
-  margin-left: 35px;
-  color: white;
-    line-height: 30px;
-    height: 30px;
-    font-size: 2em;
-}
-
-#font1:checked ~ main { 
-  font-size: 16px; 
-}
-
-#font2:checked ~ main {
-    font-size: 30px;
-}
-
-#font3:checked ~ main { 
-  font-size: 11px; 
-}
-
-#font1::after {
- 
-    font-size: 16px;
-}
-
-#font2::after {
-
-    font-size: 30px;
-}
-
-#font3::after {
-
-    font-size: 11px;
-}
-
-/*******
-
-***/
-#family1:checked ~ main { 
-  font-family: serif; 
-}
-
-#family2:checked ~ main {
-    font-family: fantasy;
-}
-
-#family3:checked ~ main { 
-  font-family: cursive;
-}
-
-#family1::after {
- 
-    font-family: serif; 
-}
-
-#family2::after {
-
-    font-family: fantasy;
-}
-
-#family3::after {
-
-    font-family: cursive;
-}
-
-#italic:checked ~ main { 
-  font-style: italic; 
-}
-
-#bold:checked ~ main {
-    font-weight: bold;
-}
-
-
-
-
-/******************************************/
-/*************** Part 2 *******************
-******************************************/
-
-
-.dropbtn, .dropbtn2, .dropbtn3 {
-    background-color: blue;
-    color: white;
-    padding: 1em;
-    font-size: 1.2em;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-}
-
-.dropdown .dropdown2 {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 10px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 0.7em 1em;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown a:hover {background-color: #333; color: white; font-weight: bold;}
-
-.show {display:block;}
-
-fieldset {
-	height: 300px;
-}
-
-.btnpart2 {
-	display: flex;
-}
-
-
-
-
-
-
-img {
-	width: 300px;
-	height: 300px;
-}
-
-.wrapper {
-	width: 1170px;
-	margin: 0 auto;
-}
-
-.wrapper a img{
-	width: 100%;
-}
-
-.wrapper a{
-	width: 32%;
-	float: left;
-	margin: 5px;
-}
-
-
-    </style>
 </head>
 <body>
 	<header>
@@ -295,7 +64,6 @@ img {
     <h4>Or even change the style</h4><br>
     <input type="radio" id="italic" name="theme"> font style italic
     <input type="radio" id="bold" name="theme"> font weight bold
-
     
     <main>
     	<p>You will see the changes happening in here!!!</p>
@@ -377,128 +145,6 @@ img {
 
 </fieldset>
 
-
-
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
-function myFunction2() {
-    document.getElementById("myDropdown2").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
-function myFunction3() {
-    document.getElementById("myDropdown3").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
-
-function myFunction4() {
-    document.getElementById("myDropdown4").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
-
-function myFunction5() {
-    document.getElementById("myDropdown5").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
-
-function myFunction6() {
-    document.getElementById("myDropdown6").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
 
 
 </div>
