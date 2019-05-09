@@ -5,12 +5,551 @@
 	<meta name="description" content="Future homework of the CNIT-133 class">
   	<meta name="keywords" content="HTML and CSS">
 	<title>Homework 7</title>
-	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="assets/hw7.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="../assets/style.css"> -->
+	<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+	<link rel="stylesheet" href="assets/jquery.fancybox.min.css">
+	<script src="assets/jquery.fancybox.min.js"></script>
+	<!-- <script src="assets/jquery-3.2.1.min.js"></script> -->
+	<script>
+$(document).ready(function() {
+$('.answer').hide();
+$('.main h2').toggle(
+function() {
+$(this).next('.answer').slideDown();
+$(this).addClass('close');
+},
+function() {
+$(this).next('.answer').fadeOut();
+$(this).removeClass('close');
+}
+); // end toggle
+}); // end ready
+</script>
+ <style>
+
+/******************************************/
+/*************** Part 1 *******************
+******************************************/
+
+
+* {
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: Verdana, serif;
+  background-image: url("assets/bg.jpg");
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h2 {
+	color: blue;
+}
+
+h4 {
+	margin: 15px 0px;
+}
+
+h1, div.answer {
+	text-align: center;
+}
+
+span,
+main {
+  background-color: white;  
+  color: var(--text, black);
+}
+
+span { font-weight: bold; }
+       
+main {
+  --gradDark: lightgrey; 
+  --gradLight: white; 
+  background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
+  padding: 10px 10px 10px 10px;
+  height: 15vh;
+  font-size: 16px;
+
+}
+		
+h1 { font-size: 1.2rem; display: inline; }
+
+
+#themeSwitchmoon:checked ~ main,
+#themeSwitchmoon:checked ~ label {
+  --text: white;
+}
+
+#themeSwitchsun:checked ~ main { 
+  --gradDark: lightyellow; 
+  --gradLight: #FAC957; 
+}
+
+#themeSwitchmoon:checked ~ main { 
+  --gradDark: blue; 
+  --gradLight: lightblue; 
+}
+
+#themeSwitchsun::after {
+  right: 50%; 
+  margin-left: 35px;
+  color: goldenrod;
+    line-height: 30px;
+    height: 30px;
+    font-size: 2em;
+}
+
+#themeSwitchmoon::after {
+  right: 100%;
+  margin-left: 35px;
+  color: white;
+    line-height: 30px;
+    height: 30px;
+    font-size: 2em;
+}
+
+#font1:checked ~ main { 
+  font-size: 16px; 
+}
+
+#font2:checked ~ main {
+    font-size: 30px;
+}
+
+#font3:checked ~ main { 
+  font-size: 11px; 
+}
+
+#font1::after {
+ 
+    font-size: 16px;
+}
+
+#font2::after {
+
+    font-size: 30px;
+}
+
+#font3::after {
+
+    font-size: 11px;
+}
+
+/*******
+
+***/
+#family1:checked ~ main { 
+  font-family: serif; 
+}
+
+#family2:checked ~ main {
+    font-family: fantasy;
+}
+
+#family3:checked ~ main { 
+  font-family: cursive;
+}
+
+#family1::after {
+ 
+    font-family: serif; 
+}
+
+#family2::after {
+
+    font-family: fantasy;
+}
+
+#family3::after {
+
+    font-family: cursive;
+}
+
+#italic:checked ~ main { 
+  font-style: italic; 
+}
+
+#bold:checked ~ main {
+    font-weight: bold;
+}
+
+
+
+
+/******************************************/
+/*************** Part 2 *******************
+******************************************/
+
+
+.dropbtn, .dropbtn2, .dropbtn3 {
+    background-color: blue;
+    color: white;
+    padding: 1em;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown .dropdown2 {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 10px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 0.7em 1em;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #333; color: white; font-weight: bold;}
+
+.show {display:block;}
+
+fieldset {
+	height: 300px;
+}
+
+.btnpart2 {
+	display: flex;
+}
+
+
+
+
+
+
+img {
+	width: 300px;
+	height: 300px;
+}
+
+.wrapper {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.wrapper a img{
+	width: 100%;
+}
+
+.wrapper a{
+	width: 32%;
+	float: left;
+	margin: 5px;
+}
+
+
+    </style>
 </head>
 <body>
 	<header>
-		<h1>COMING SOON - HOMEWORK 7</h1>
+		<h1>Homework 7 - Object Model and Miscellaneous jQuery</h1>
 	</header>
+
+<br><br><br>
+	<div class="main">
+
+
+
+<h2>Part 1</h2>
+<div class="answer">
+	<p>here you can change the style of this page by clicling on the elements below:</p>
+	
+	<div class="page">
+    <!--Theme switch-->
+    <h4>Look how easy it is to change the background color</h4><br>
+    <input type="radio" id="themeSwitchsun" name="theme" class="theme-switch__input"> Background yellow
+    <input type="radio" id="themeSwitchmoon" name="theme" class="theme-switch__input"> Background blue
+
+    <h4>Or maybe change the font size</h4><br>
+    <input type="radio" id="font3" name="theme"> font size small
+    <input type="radio" id="font1" name="theme"> font size medium
+    <input type="radio" id="font2" name="theme"> font size big
+
+    <h4>Or maybe change the font family</h4><br>
+    <input type="radio" id="family1" name="theme"> font family serif
+    <input type="radio" id="family2" name="theme"> font family fantasy
+    <input type="radio" id="family3" name="theme"> font family cursive
+
+
+    <h4>Or even change the style</h4><br>
+    <input type="radio" id="italic" name="theme"> font style italic
+    <input type="radio" id="bold" name="theme"> font weight bold
+
+    
+    <main>
+    	<p>You will see the changes happening in here!!!</p>
+        
+    </main>
+</div>
+
+</div>
+
+<br><br><br>
+
+<h2>Part 2</h2>
+<div class="answer">
+
+
+	<fieldset>
+		<legend>List of my previous homeworks</legend>
+		
+	
+<div class="btnpart2">
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Homework1</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="index.html">Home</a>
+  </div>
+</div>
+
+<div class="dropdown2">
+<button onclick="myFunction2()" class="dropbtn">Homework2</button>
+  <div id="myDropdown2" class="dropdown-content">
+    <a href="fileshw2/hw2.1.html">Part 1</a>
+    <a href="fileshw2/hw2.2.html">Part 2</a>
+    <a href="fileshw2/hw2.3.html">Part 3</a>
+    <a href="fileshw2/hw2.4.html">Part 4</a>
+    <a href="fileshw2/extra.html">Extra Credit</a>
+  </div>
+</div>
+
+<div class="dropdown3">
+<button onclick="myFunction3()" class="dropbtn">Homework3</button>
+  <div id="myDropdown3" class="dropdown-content">
+    <a href="fileshw3/hw3.1.html">Part 1</a>
+    <a href="fileshw3/hw3.2.html">Part 2</a>
+    <a href="fileshw3/hw3.3.html">Part 3</a>
+    <a href="fileshw3/hw3.4.html">Part 4</a>
+  </div>
+</div>
+
+<div class="dropdown4">
+<button onclick="myFunction4()" class="dropbtn">Homework4</button>
+  <div id="myDropdown4" class="dropdown-content">
+    <a href="hw4.html">Part 1</a>
+
+  </div>
+</div>
+
+
+<div class="dropdown5">
+<button onclick="myFunction5()" class="dropbtn">Homework5</button>
+  <div id="myDropdown5" class="dropdown-content">
+    <a href="fileshw5/hw5.1.html">Part 1</a>
+    <a href="fileshw5/hw5.2.html">Part 2</a>
+    <a href="fileshw5/hw5.3.html">Part 3</a>
+  </div>
+</div>
+
+<div class="dropdown6">
+<button onclick="myFunction6()" class="dropbtn">Homework6</button>
+  <div id="myDropdown6" class="dropdown-content">
+    <a href="fileshw6/hw6.1.html">Part 1</a>
+    <a href="fileshw6/hw6.2.html">Part 2</a>
+    <a href="fileshw6/hw6.3.html">Part 3</a>
+  </div>
+</div>
+
+
+
+</div>
+
+</fieldset>
+
+
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function myFunction2() {
+    document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function myFunction3() {
+    document.getElementById("myDropdown3").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+function myFunction4() {
+    document.getElementById("myDropdown4").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+function myFunction5() {
+    document.getElementById("myDropdown5").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+function myFunction6() {
+    document.getElementById("myDropdown6").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+</div>
+
+<br><br><br>
+
+<h2>Part 3</h2>
+<div class="answer">
+<p>Here you can find a group of pictures that you can click on any of them to zoom them and you can create a slide show by pressing the play button.</p>
+
+
+<div class="wrapper">
+	<a data-fancybox="gallery" href="assets/img1.jpg" data-caption="Sunset"><img src="assets/small/img1.jpg"></a>
+	<a data-fancybox="gallery" href="assets/img2.jpg" data-caption="Nature"><img src="assets/small/img2.jpg"></a>
+	<a data-fancybox="gallery" href="assets/img3.jpg" data-caption="Desert"><img src="assets/small/img3.jpg"></a>
+	<a data-fancybox="gallery" href="assets/img4.jpg" data-caption="Wave"><img src="assets/small/img4.jpg"></a>
+	<a data-fancybox="gallery" href="assets/img5.jpg" data-caption="Stars"><img src="assets/small/img5.jpg"></a>
+	<a data-fancybox="gallery" href="assets/img6.jpg" data-caption="Snow"><img src="assets/small/img6.jpg"></a>
+</div>
+
+
+<script>
+
+	$('[data-fancybox="gallery"]').fancybox({
+	loop: true,
+	buttons: [
+    "zoom",
+    "share",
+    "slideShow",
+    "fullScreen",
+    "download",
+    "thumbs",
+    "close"
+  ],
+  animationEffect: "zoom-in-out"
+});
+</script>
+
+
+
+
+
+
+</div>
+
+
+
+<br><br><br>
+
+
+
 	<ul>
 		<li>
 			<a href="index.html" class="button">Back to main page</a>
