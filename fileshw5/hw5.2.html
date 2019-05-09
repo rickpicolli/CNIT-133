@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Third homework of the CNIT-133 class">
+  	<meta name="keywords" content="HTML and CSS">
+	<title>Homework 5</title>
+	<link rel="stylesheet" type="text/css" href="../assets/style.css">
+</head>
+<body>
+
+	<h2>Select one of the option below to see a onchange event handler working</h2>
+
+	<form>
+		<fieldset>
+			<legend>List of some Programming Languages</legend>
+		<select id="mySelect" onchange="onChanFunc()">
+			<option value="">Select a option</option>
+			<option value="JavaScript">JavaScript</option>
+			<option value="Python">Python</option>
+			<option value="Java">Java</option>
+			<option value="C or C++ or C#">C or C++ or C#</option>
+			<option value="PHP">PHP</option>
+			
+		</select>
+
+		<p id="result"></p>
+
+		</fieldset>
+	</form>
+
+
+	<script>
+		function onChanFunc() {
+			var x = document.getElementById("mySelect").value;
+			document.getElementById("result").innerHTML = "<p>You select the language: " + x + " </p>";
+		}
+	</script>
+	<br><br><br>
+
+	<form>
+		<fieldset>
+			<legend>List of sites to be redirected</legend>
+			<p>Choose one of these options:
+				<select name="destList">
+					<option>Choose one website</option>
+					<option value="http://www.yahoo.com/">Yahoo</option>
+					<option value="http://www.w3.org/">W3C</option>
+					<option value="http://www.mozilla.org/">Mozilla</option>
+					<option value="http://www.ccsf.edu/cnit">CNIT</option>
+				</select>
+			</p>
+		
+
+		<input type="button" value="Go" onclick="goToNewPage(this.form);">
+
+		</fieldset>
+	</form>
+
+	<script>
+		
+	function goToNewPage(myForm) {
+		var mydest = myForm.destList.options[myForm.destList.selectedIndex].value;
+		window.location = mydest; 
+	}
+
+	</script>
+
+</body>
+</html>

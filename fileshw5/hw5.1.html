@@ -5,9 +5,25 @@
 	<meta name="description" content="Third homework of the CNIT-133 class">
   	<meta name="keywords" content="HTML and CSS">
 	<title>Homework 5</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="../assets/hm3.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../assets/style.css">
+
+	<style>
+		.error {
+		  color:red;
+		  font-size: 15px;
+		  font-weight: bold;
+		}
+
+		#showValidation {
+			color: blue;
+			font-size: 15px;
+		  font-weight: bold;
+		}
+	</style>
+
+
 </head>
 <body>
 	<div id="showhide">Click to Show/Hide Instructions</div>
@@ -16,6 +32,91 @@
 	Your script should validate whether the user has entered data in the input text box, has checked a radio button, has checked at least one checkbox, and has selected an option from the select items.<br><br>
 
 	Use a submit button to invoke the validation script, so that the form is processed only when the form fields are valid. If a field is invalid then display a message to the user. In your form statement, use method="post" and an action that can be a mailto or a webpage(displaying that the form has been processed), but be sure to use input type="submit" for your submit button. Alternatively you can leave out the form's action and method, but then you should use an input type="button", along with displaying any appropriate messages. </div>
+
+	<form id="form1validation">
+		<fieldset>
+			<legend>My form</legend>
+			<p>Name: <input type="text" name="name" id="name"></p>
+			<p>Gender:
+				<input type="radio" name="gender" id="gender1"> M 
+				<input type="radio" name="gender" id="gender2"> F
+			</p>
+			<fieldset>
+			<legend>Age Group:</legend>
+				<p><input type="checkbox" name="age" id="age1">10-17 years old</p>
+				<p><input type="checkbox" name="age" id="age2">18-20 years old</p>
+				<p><input type="checkbox" name="age" id="age3">21-29 years old</p>
+				<p><input type="checkbox" name="age" id="age4">30-40 years old</p>
+				<p><input type="checkbox" name="age" id="age5">50+ years old</p>
+				</fieldset>
+			<p>Race:
+				<select name="race">
+					<option value="">Select your race below</option>
+					<option value="American Indian">American Indian</option>
+					<option value="Asian">Asian</option>
+					<option value="Black or African American">Black or African American</option>
+					<option value="Hispanic or Latino">Hispanic or Latino</option>
+					<option value="White">White</option>
+				</select>
+			<input type="button" value="Submit Form" onclick="form1()">
+
+			<div id='showValidation'></div>
+		</fieldset>
+	</form>
+
+	<script type="text/javascript">
+		
+		function form1() {
+			if ( $("#form1validation").valid() ) {
+				document.getElementById('showValidation').innerHTML='<p>Form filled with success</p>';
+			 }
+		}
+
+
+		$(document).ready(function() {
+			$('#form1validation').validate({
+				rules: {
+					name: { 
+                      required:true 
+                    },
+                    gender: {
+                      required:true
+                    },
+                    age: {
+                      required:true
+                    },
+                    race: {
+                      required:true
+                    }
+                  },
+                  messages: {
+                    name: {
+                      required: 'Your name is required'
+                    },
+                    gender: {
+                      required: 'Your gender is required'
+                    },
+                    age: {
+                      required: 'Please select one of the options'
+                    },
+                    race: {
+                      required: 'Please choose one of the options'
+                    }
+                  },
+                  errorPlacement: function(error, element) {
+                    if ( element.is(":radio") || element.is(":checkbox")) {
+                      error.appendTo( element.parent());
+                    } else {
+                      error.insertAfter(element);
+                    }
+                  }
+                });
+              });
+
+
+
+
+	</script>
 
 </body>
 </html>
