@@ -90,10 +90,40 @@
 </script>	
 </div>
 
+<h2> extra credit </h2>
+<p>input a number between 2 and 10</p>
+<input type="number" name="userInput" id="userInput">
+<input type="button" name="go" value="Show square" id="go" onclick="square()">
+
+<p id="result"></p>
 
 
-<!-- 
+<script>
 
+function square() {
+
+	var userInput = document.getElementById("userInput").value;
+
+	if ((userInput >= 2) && (userInput <= 10)) {
+
+
+		for (i = 2; i <= userInput; i++) {
+			
+			for (j = 2; j <= userInput; j++) {
+				if (i == 2 || i == userInput || j == 2 || j == userInput) {
+					document.getElementById("result").innerHTML = "*";
+				} else {
+					document.getElementById("result").innerHTML = " ";
+				}
+			}
+		}
+	} else {
+		alert("error");
+	}
+	} 
+
+
+</script>
 
 	<ul>
 		<li>
